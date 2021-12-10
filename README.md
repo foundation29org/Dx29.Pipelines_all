@@ -2,7 +2,7 @@
 	<img align="right" width="100px" src="https://dx29.ai/assets/img/logo-Dx29.png">
 </div>
 
-Dx29 Pipelines All
+Dx29 Pipelines All Stages
 ==============================================================================================================================================
 ### **Overview**
 
