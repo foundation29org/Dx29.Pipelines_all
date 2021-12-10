@@ -50,6 +50,8 @@ You can use any text editor with this project.
 
 You must work on a repository on Github and have it associated with this project and Azure Pipelines to run it.
 
+You have to modify the "sample" projects with the real values of the environment where you want to automate the build and deploy tasks: AKS, container registry, etc.
+
 <p>&nbsp;</p>
 
 ### **Contribute**
