@@ -1,0 +1,31 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: <Deployment_name>
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: <Deployment_name>
+  template:
+    metadata:
+      labels:
+        app: <Deployment_name>
+    spec:
+      containers:
+        - name: <sample>
+          image: __image__
+          ports:
+          - containerPort: 80
+          resources:
+            requests:
+              cpu: 0.75
+              memory: "512Mi"
+          volumeMounts: (// Only if the sample miccroservice needs secrets )
+          - name: secrets
+            mountPath: /app/secrets
+            readOnly: true
+      volumes: (// Only if the sample miccroservice needs secrets )
+      - name: secrets
+        secret:
+          secretName: secret-appsettings

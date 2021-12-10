@@ -1,0 +1,30 @@
+trigger:
+- none
+
+resources:  
+  repositories:
+  - repository: <Repository_name>
+    name: <Repository_name>
+    type: git
+    ref: <repository_branch>
+
+parameters:
+- name: tag
+  displayName: Tag
+  type: string
+  default: 'v0.00.00'
+
+variables:
+- template: vars/vars_pipeline.yaml
+
+stages:
+  - template: Templates/azure-pipelines-template-sample.yml
+    parameters:
+      tag: ${{parameters.tag}}
+      dockerRegistryServiceConnection: $(dockerRegistryServiceConnection)
+      containerRegistry: $(containerRegistry)
+      dockerfilePath: '<Dockerfile_path>'
+      imagePullSecret: $(imagePullSecret)
+      vmImageName: $(vmImageName)
+      imageRepository: $(imageRepositorySample)     
+      environment: $(environment)

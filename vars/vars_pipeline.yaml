@@ -1,0 +1,15 @@
+variables:
+
+  # Container registry service connection established during pipeline creation
+  dockerRegistryServiceConnection: <docker_registry_connection>
+  containerRegistry: <acr_server>
+  dockerfilePath: '**/Dockerfile'
+  imagePullSecret: <aks_image_pull_secret_name>
+
+  # Agent VM image name
+  vmImageName: 'ubuntu-latest'
+
+  environment: <Environment.namespace>
+
+  # Images
+  imageRepositorySample: 'sample'
