@@ -4,6 +4,8 @@
 
 Dx29 Pipelines All Stages
 ==============================================================================================================================================
+[![MIT license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
+
 ### **Overview**
 
 In this project the YAML of a environment pipeline and the manifest files needed to deploy the environment will be located.
